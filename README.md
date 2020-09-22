@@ -10,7 +10,7 @@ Simply another color picker using the spectrum plugin. However, the picker has b
 In addition to that, we have added the option to have the property field visible to show the color value selected.
 
 ### Installation:
-** Coming Shortly **
+```Install-Package uSkriptSpectrum```
 
 ### Previews:
 
