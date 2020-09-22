@@ -1,0 +1,104 @@
+{
+	propertyEditors	: [
+		{
+			alias		: "uSkriptSpectrum",
+			name		: "uSkript Spectrum",
+			icon		: "icon-palette",
+			group		: "Pickers",
+			editor		: {
+				view		: "~/App_Plugins/uSkript.Spectrum/views/index.html"
+			},
+			"prevalues"	: {
+				fields		: [
+					{
+						"label"	: "Note",
+						"key"	: "packagenote",
+						"view"	: "readonlykeyvalues",
+						"description":"For more details about Spectrum's options, please go to <a href='https://bgrins.github.io/spectrum/' target='_blank'>https://bgrins.github.io/spectrum/</a>"
+					},
+					{
+						"label"	: "Inline",
+						"key"	: "flat",
+						"view"	: "boolean",
+						"description":"Will always show up at full size, and be positioned as an inline-block element."
+					},
+					{
+						"label"	: "Format",
+						"key"	: "preferredFormat",
+						"view"	: "radiobuttonlist",
+						"config": {
+							"prevalues": [
+								{"label":"Hex",	"value":"hex"},
+								{"label":"Hex3","value":"hex3"},
+								{"label":"HSL",	"value":"hsl"},
+								{"label":"RGB",	"value":"rgb"},
+								{"label":"Name","value":"name"}
+	                        ]
+						}
+					},
+					{
+						"label"	: "Show Color Palette",
+						"key"	: "showPalette",
+						"view"	: "boolean"
+					},
+					{
+						"label"	: "Show Palette Only",
+						"key"	: "showPaletteOnly",
+						"view"	: "boolean"
+					},
+					{
+						"label"	: "Toggle Color Box",
+						"key"	: "togglePaletteOnly",
+						"view"	: "boolean",
+						"description":"If you activate 'Show Palette Only', this will allow you to have a toggle button to open and close the colour box"
+					},
+					{
+						"label"	: "Add Default Palette",
+						"key"	: "addDefaultPalette",
+						"view"	: "boolean"
+					},
+					{
+						"label"	: "Additional Palette",
+						"key"	: "palette",
+						"view"	: "textarea",
+						"description":"Add hex values separated by commas. These will be displayed before the default palette if it's activated"
+					},
+					{
+						"label"	: "Add Selections to Palette",
+						"key"	: "showSelectionPalette",
+						"view"	: "boolean",
+						"description":"Will add selected colours under the existing palette."
+					},
+					{
+						"label"	: "Show Palette Input",
+						"key"	: "showInput",
+						"view"	: "boolean",
+						"description":"Displays an input in the colour picker with the selected value"
+					},
+					{
+						"label"	: "Show Property Input",
+						"key"	: "showUmbInput",
+						"view"	: "boolean",
+						"description":"Displays the Umbraco property field next to the color picker"
+					},
+					{
+						"label"	: "Allow Empty Selection",
+						"key"	: "allowEmpty",
+						"view"	: "boolean"
+					},
+					{
+						"label"	: "Show Alpha Slider",
+						"key"	: "showAlpha",
+						"view"	: "boolean"
+					}
+				]
+			},
+			"defaultConfig": {
+				preferredFormat	: "hex"
+			}
+		}
+	],
+	javascript		: [
+		'~/App_Plugins/uSkript.Spectrum/js/controller.js'
+	]
+}
