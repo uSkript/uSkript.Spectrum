@@ -75,7 +75,7 @@
     replaceInput = [
         "<div class='sp-replacer'>",
             "<div class='sp-preview'><div class='sp-preview-inner'></div></div>",
-            "<div class='sp-dd'>&#9660;</div>",
+            "<div class='sp-dd'></div>",
         "</div>"
     ].join(''),
     markup = (function () {
@@ -94,7 +94,7 @@
                 "<div class='sp-palette-container'>",
                     "<div class='sp-palette sp-thumb sp-cf'></div>",
                     "<div class='sp-palette-button-container sp-cf'>",
-                        "<button type='button' class='sp-palette-toggle'></button>",
+                        "<button type='button' class='btn btn-action sp-palette-toggle'></button>",
                     "</div>",
                 "</div>",
                 "<div class='sp-picker-container'>",
@@ -118,12 +118,12 @@
                         "<div class='sp-alpha'><div class='sp-alpha-inner'><div class='sp-alpha-handle'></div></div></div>",
                     "</div>",
                     "<div class='sp-input-container sp-cf'>",
-                        "<input class='sp-input' type='text' spellcheck='false'  />",
+                        "<input class='sp-input' type='text' spellcheck='false' />",
                     "</div>",
                     "<div class='sp-initial sp-thumb sp-cf'></div>",
                     "<div class='sp-button-container sp-cf'>",
-                        "<a class='sp-cancel' href='#'></a>",
-                        "<button type='button' class='sp-choose'></button>",
+                        "<a class='btn btn-danger sp-cancel' href='#'></a>",
+                        "<button type='button' class='btn btn-success sp-choose'></button>",
                     "</div>",
                 "</div>",
             "</div>"
@@ -852,13 +852,13 @@
 
                 var alphaX = currentAlpha * alphaWidth;
                 alphaSlideHelper.css({
-                    "left": (alphaX - (alphaSlideHelperWidth / 2)) + "px"
+                    "left": (alphaX - (alphaSlideHelperWidth / 2) - 10) + "px"
                 });
 
                 // Where to show the bar that displays your current selected hue
-                var slideY = (currentHue) * slideHeight;
+                var slideY = (currentHue) * (slideHeight - 3);
                 slideHelper.css({
-                    "top": (slideY - slideHelperHeight) + "px"
+                    "top": (slideY - slideHelperHeight + 3) + "px"
                 });
             }
         }
