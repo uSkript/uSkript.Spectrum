@@ -350,3 +350,4 @@ MigrationBackup/
 .ionide/
 .DS_Store
 dist/App_Plugins/uSkriptSpectrum.nuspec
+dist/App_Plugins/uSkript.Spectrum.nuspec
