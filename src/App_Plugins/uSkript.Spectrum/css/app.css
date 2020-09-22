@@ -151,7 +151,7 @@
 	font-size: 12px;
 	font-weight:bold;
 	outline: none;
-	padding: 10px 14px;
+	padding: 8px 14px;
 	text-shadow: none
 }
 
@@ -185,6 +185,15 @@
 .sp-palette-toggle,
 .sp-choose {
 	float:right
+}
+
+.sp-container button.sp-palette-toggle {
+	background: #1b264f
+}
+
+.sp-container button.sp-palette-toggle:hover,
+.sp-container button.sp-palette-toggle:active {
+	background: #3544b1
 }
 
 .sp-input-container {
